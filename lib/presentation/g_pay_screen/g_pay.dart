@@ -29,7 +29,7 @@ class _GPayScreenState extends State<GPayScreen> {
       child: Scaffold(
         body: SizedBox(
           width: MediaQuery.of(context).size.width,
-          child: Container()
+          child: Container(),
         ),
       ),
     );
