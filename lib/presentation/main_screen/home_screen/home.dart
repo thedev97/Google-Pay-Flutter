@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 tag: 'profile',
                 child: CircleAvatar(
                         backgroundImage: AssetImage(GPayImageConstant.gPayUser),
-                        radius: 20)
+                        radius: 24)
                     .paddingRight(10))
             .onTap(() {}),
       ],
