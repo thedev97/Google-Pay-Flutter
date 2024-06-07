@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:g_pay/presentation/g_pay_screen/g_pay.dart';
+import 'package:g_pay/presentation/main_screen/home_screen/home.dart';
+import 'package:g_pay/presentation/main_screen/main.dart';
+import 'package:g_pay/presentation/splash/splash.dart';
 
 class GPayRoutes {
-  static const String gPayScreen = '/g_pay_screen';
+  static const String mainScreen = '/main';
+  static const String homeScreen = '/home';
+  static const String splashScreen = '/splash';
   static const String initialRoute = '/initialRoute';
 
   static Map<String, WidgetBuilder> get routes => {
-    gPayScreen: (context) => const GPayScreen(),
+    splashScreen: (context) => const SplashScreen(),
+    mainScreen: (context) => const MainScreen(),
+    homeScreen: (context) => const HomeScreen(),
+    initialRoute: (context) => const SplashScreen(),
   };
 }

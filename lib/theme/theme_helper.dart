@@ -1,5 +1,3 @@
-import 'package:g_pay/core/utils/g_pay_image_constant.dart';
-
 import '../core/g_pay_export.dart';
 
 /// Helper class for managing themes and colors.
@@ -44,7 +42,7 @@ class ThemeHelper {
       visualDensity: VisualDensity.standard,
       colorScheme: colorScheme,
       textTheme: TextThemes.textTheme(colorScheme),
-      scaffoldBackgroundColor: colorScheme.primaryContainer,
+      scaffoldBackgroundColor: colorScheme.background,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             backgroundColor: colorScheme.onError.withOpacity(0.36),
@@ -84,27 +82,15 @@ class TextThemes {
         titleLarge: GoogleFonts.manrope(
             color: colorScheme.onPrimaryContainer,
             fontSize: 20.0,
-            fontWeight: FontWeight.w800,
-            shadows: [
-              const Shadow(
-                  color: Colors.black54, offset: Offset(2, 2), blurRadius: 3),
-            ]),
+            fontWeight: FontWeight.w800),
         titleMedium: GoogleFonts.manrope(
             color: colorScheme.onPrimaryContainer,
             fontSize: 18.0,
-            fontWeight: FontWeight.w500,
-            shadows: [
-              const Shadow(
-                  color: Colors.black54, offset: Offset(2, 2), blurRadius: 3),
-            ]),
+            fontWeight: FontWeight.w500),
         titleSmall: GoogleFonts.manrope(
             color: Colors.grey[800],
             fontSize: 18.0,
-            fontWeight: FontWeight.w500,
-            shadows: [
-              const Shadow(
-                  color: Colors.black, offset: Offset(0, 0), blurRadius: 1),
-            ]),
+            fontWeight: FontWeight.w500),
       );
 }
 
@@ -135,6 +121,21 @@ class PrimaryColors {
 
   // Brown
   Color get brown200 => const Color(0XFF937131);
+
+  // Gray
+  Color get gray900 => const Color(0XFF121515);
+
+  Color get gray800 => const Color(0XFF3A4245);
+
+  Color get gray700 => const Color(0X23001540);
+
+  // BlueGray
+  Color get blueGray100 => const Color(0XFFD9D9D9);
+
+  Color get blueGray900 => const Color(0XFF262C2D);
+
+  // Black
+  Color get black => const Color(0xFF010101);
 }
 
 class GPayDecoration {
@@ -142,16 +143,18 @@ class GPayDecoration {
       const BoxDecoration(color: Colors.transparent);
 
   static BoxDecoration get appBarDecoration => BoxDecoration(
-    color: theme.colorScheme.onPrimary,
-    image: DecorationImage(
-        image: AssetImage(GPayImageConstant.imagePath),
-        fit: BoxFit.cover),
-  );
-
+        color: theme.colorScheme.onPrimary,
+        image: DecorationImage(
+            image: AssetImage(GPayImageConstant.imagePath), fit: BoxFit.cover),
+      );
 }
 
 class BorderRadiusStyle {
   static BorderRadius get roundedBorder5 => BorderRadius.circular(5.0);
+
+  static BorderRadius get roundedBorder55 => BorderRadius.circular(55.0);
+
+  static BorderRadius get roundedBorder60 => BorderRadius.circular(60.0);
 }
 
 double get strokeAlignInside => BorderSide.strokeAlignInside;
@@ -164,6 +167,7 @@ class GPayTextStyles {
   // Display text style
   static get displaySmall =>
       theme.textTheme.displaySmall!.copyWith(fontSize: 30.0, height: 1.35);
+
   static get titleMediumSemiBold =>
       theme.textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600);
 }

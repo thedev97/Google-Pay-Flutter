@@ -1,4 +1,3 @@
-import 'package:g_pay/theme/theme_helper.dart';
 import '../../core/g_pay_export.dart';
 
 class GPayAppBarTitle extends StatelessWidget {

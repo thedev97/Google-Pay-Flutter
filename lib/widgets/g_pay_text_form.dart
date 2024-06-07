@@ -1,5 +1,4 @@
 import 'package:g_pay/core/g_pay_export.dart';
-import 'package:g_pay/theme/theme_helper.dart';
 
 class GPayTextFormField extends StatelessWidget {
   final String label;

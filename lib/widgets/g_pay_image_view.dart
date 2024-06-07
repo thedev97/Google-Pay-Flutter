@@ -1,6 +1,5 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:g_pay/core/g_pay_export.dart';
-import 'package:g_pay/core/utils/g_pay_image_constant.dart';
 
 class GPayImageView extends StatelessWidget {
   final String? imagePath;
