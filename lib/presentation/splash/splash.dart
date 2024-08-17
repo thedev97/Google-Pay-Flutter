@@ -1,6 +1,6 @@
 import 'package:flutter/scheduler.dart';
 import 'package:g_pay/core/g_pay_export.dart';
-import 'package:g_pay/presentation/main_screen/main.dart';
+import 'package:g_pay/presentation/main_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -35,7 +35,6 @@ class SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
         body: Stack(
           alignment: Alignment.center,
           children: [
