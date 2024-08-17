@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:g_pay/presentation/main_screen/home_screen/home.dart';
+import 'package:g_pay/presentation/home_screen/home.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class MainScreen extends StatefulWidget {
@@ -21,7 +21,9 @@ class MainScreenState extends State<MainScreen> {
 
   init() async {
     controller = PageController(initialPage: currentPage);
-    setStatusBarColor(Colors.black, statusBarIconBrightness: Brightness.dark, statusBarBrightness: Brightness.dark);
+    setStatusBarColor(Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+        statusBarBrightness: Brightness.light);
   }
 
   @override

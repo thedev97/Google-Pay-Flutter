@@ -1,3 +1,5 @@
+import 'package:g_pay/core/utils/g_pay_colors.dart';
+
 import '../core/g_pay_export.dart';
 
 /// Helper class for managing themes and colors.
@@ -42,7 +44,7 @@ class ThemeHelper {
       visualDensity: VisualDensity.standard,
       colorScheme: colorScheme,
       textTheme: TextThemes.textTheme(colorScheme),
-      scaffoldBackgroundColor: colorScheme.background,
+      scaffoldBackgroundColor: GPayColors.gpColorBlack,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             backgroundColor: colorScheme.onError.withOpacity(0.36),
@@ -71,26 +73,10 @@ class ThemeHelper {
 /// Class containing the supported text theme styles.
 class TextThemes {
   static TextTheme textTheme(ColorScheme colorScheme) => TextTheme(
-        displaySmall: GoogleFonts.manrope(
-            color: colorScheme.onPrimaryContainer,
-            fontSize: 35.0,
-            fontWeight: FontWeight.w700,
-            shadows: [
-              const Shadow(
-                  color: Colors.black54, offset: Offset(2, 2), blurRadius: 3),
-            ]),
-        titleLarge: GoogleFonts.manrope(
-            color: colorScheme.onPrimaryContainer,
-            fontSize: 20.0,
-            fontWeight: FontWeight.w800),
-        titleMedium: GoogleFonts.manrope(
-            color: colorScheme.onPrimaryContainer,
-            fontSize: 18.0,
-            fontWeight: FontWeight.w500),
-        titleSmall: GoogleFonts.manrope(
-            color: Colors.grey[800],
-            fontSize: 18.0,
-            fontWeight: FontWeight.w500),
+        displaySmall: primaryTextStyle(size: 15, color: GPayColors.gpLightBlue),
+        titleSmall: primaryTextStyle(size: 14, color: GPayColors.gpLightBlue),
+        titleMedium: primaryTextStyle(size: 16, color: GPayColors.gpLightBlue),
+        titleLarge: primaryTextStyle(size: 20, color: GPayColors.gpLightBlue),
       );
 }
 
@@ -179,8 +165,16 @@ class GPayButtonStyles {
       elevation: MaterialStateProperty.all<double>(0));
 
   static ButtonStyle get elevatedButtonDecoration => ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
-      elevation: MaterialStateProperty.all<double>(0));
+    backgroundColor: MaterialStateProperty.all(
+        GPayColors.gpAppColor),
+    shadowColor: MaterialStateProperty.all(Colors.black.withOpacity(0.25)),
+    elevation: MaterialStateProperty.all(8),
+    shape: MaterialStateProperty.all(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+    ),
+  );
 }
 
 /// Class containing custom colors for a primary theme.

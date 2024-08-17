@@ -31,7 +31,7 @@ class GPayAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       toolbarHeight: height ?? 70.0,
       automaticallyImplyLeading: false,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.blue.withOpacity(0.2),
       flexibleSpace: isDefaultStyle == true ? _getDefaultStyle() : _getStyle(),
       leadingWidth: leadingWidth ?? 0,
       leading: leading,

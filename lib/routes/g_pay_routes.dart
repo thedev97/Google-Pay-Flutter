@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:g_pay/presentation/main_screen/home_screen/home.dart';
-import 'package:g_pay/presentation/main_screen/main.dart';
+import 'package:g_pay/presentation/home_screen/home.dart';
+import 'package:g_pay/presentation/main_screen.dart';
 import 'package:g_pay/presentation/splash/splash.dart';
 
 class GPayRoutes {

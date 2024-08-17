@@ -1,7 +1,7 @@
 import 'package:g_pay/core/g_pay_export.dart';
+import 'package:g_pay/core/utils/g_pay_string.dart';
 import 'package:g_pay/routes/g_pay_routes.dart';
-import 'core/utils/g_pay_string.dart';
-import 'presentation/main_screen/home_screen/bloc/home_bloc.dart';
+import 'presentation/home_screen/bloc/home_bloc.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

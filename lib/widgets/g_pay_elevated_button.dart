@@ -45,7 +45,7 @@ class GPayElevatedButton extends GPayBaseButton {
               leftIcon ?? const SizedBox.shrink(),
               Text(text,
                   style: buttonTextStyle ??
-                      GPayTextStyles.titleMediumSemiBold),
+                      theme.textTheme.titleMedium?.copyWith(fontSize: 15)),
               rightIcon ?? const SizedBox.shrink()
             ],
           ),
