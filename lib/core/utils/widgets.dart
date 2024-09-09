@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class MySeparator extends StatelessWidget {
   final double height;
   final Color color;
-
   const MySeparator({super.key, this.height = 1, this.color = Colors.grey});
 
   @override
