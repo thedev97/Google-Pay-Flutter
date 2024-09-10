@@ -1,13 +1,17 @@
 import 'package:g_pay/core/g_pay_export.dart';
+import 'package:g_pay/core/utils/app_widget.dart';
 import 'package:g_pay/data/data_provider.dart';
 import 'package:g_pay/core/utils/g_pay_colors.dart';
 import 'package:g_pay/presentation/chat_screen/model/chat_model.dart';
 import 'package:g_pay/presentation/home_screen/widgets/g_pay_banner.dart';
 import 'package:g_pay/presentation/home_screen/widgets/home_top_widget.dart';
 import 'package:g_pay/presentation/home_screen/widgets/home_widget.dart';
+import 'package:g_pay/presentation/home_screen/widgets/shared/blur_background.dart';
 import 'package:g_pay/presentation/home_screen/widgets/shared/profile_avatar.dart';
 import 'package:g_pay/presentation/home_screen/widgets/shared/search_bar.dart';
 import 'package:g_pay/widgets/app_bar/g_pay_app_bar.dart';
+import 'package:g_pay/widgets/g_pay_elevated_button.dart';
+import 'package:share_plus/share_plus.dart';
 
 import 'bloc/home_bloc.dart';
 
@@ -133,6 +137,48 @@ class _HomeScreenState extends State<HomeScreen> {
                 const Icon(Icons.navigate_next, color: GPayColors.gpLightBlue),
               ],
             ).paddingOnly(left: 20, right: 20),
+            20.height,
+            Stack(
+              children: [
+                const BlurredBackground(),
+                commonCacheImageWidget(GPayImageConstant.gpFooter,
+                    fit: BoxFit.cover, height: 180, width: context.width()),
+                commonCacheImageWidget(GPayImageConstant.gpFooterBg,
+                    fit: BoxFit.cover, height: 180, width: context.width()),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Invite your friends",
+                        style: primaryTextStyle(
+                            size: 16,
+                            color: Colors.white,
+                            weight: FontWeight.bold)),
+                    5.height,
+                    Text(
+                        '${"Get "}\u{20B9}${"201 after each friend's first payment"}',
+                        style: primaryTextStyle(size: 14, color: Colors.white)),
+                    12.height,
+                    GPayElevatedButton(
+                        text: 'Invite',
+                        width: 80.0,
+                        height: 35.0,
+                        onPressed: () async {
+                          await Share.share(
+                              'Get \u{20B9}201 after each friend\'s first payment');
+                        },
+                        buttonStyle: ButtonStyle(
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                              side: BorderSide(color: Colors.grey[300]!),
+                            ),
+                          ),
+                        ))
+                  ],
+                ).paddingAll(30),
+              ],
+            ),
             20.height,
           ],
         ),

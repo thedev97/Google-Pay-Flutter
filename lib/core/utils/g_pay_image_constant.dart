@@ -4,7 +4,8 @@ class GPayImageConstant {
   static String gPayQRScanner = '$imagePath/gp_qr_scanner.png';
   static String gPaySplash = '$imagePath/gp_app_icon.png';
   static String gpBannerBg = '$imagePath/gp_banner_img.jpg';
-  static String gpFooter = ' $imagePath/gp_footer_bg.png';
+  static String gpFooter = '$imagePath/gp_footer.jpg';
+  static String gpFooterBg = '$imagePath/gp_footer_bg.png';
   static String gpUser0 =  '$imagePath/gp_user0.jpg';
   static String gpUser1 =  '$imagePath/gp_user1.jpg';
   static String gpUser2 = '$imagePath/gp_user2.jpg';

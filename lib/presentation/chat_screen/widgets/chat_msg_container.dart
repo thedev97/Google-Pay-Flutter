@@ -32,7 +32,7 @@ class MessageContainer extends StatelessWidget {
               bottom: 4.0,
               right: (context.width() * 0.25).toDouble()),
           decoration: BoxDecoration(
-            color: isMe ? Colors.black : Colors.black,
+            color: Colors.black,
             boxShadow: const [
               BoxShadow(
                 color: Colors.grey,
